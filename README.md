@@ -3,7 +3,7 @@ Cross-compile icinga2 packages for ARM architectures (you can build for every ac
 
 # Requirements
 
-- You will need at least 3GB space for your docker containers
+- You will need at least 1.8GB space for your docker containers
 - Minimally 2GBs of RAM are necessary to compile icinga2
 - Host, which compiles icinga2 obviously has to be `x86_64`
 
