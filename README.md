@@ -37,3 +37,9 @@ docker run --rm -v "$PWD/pkgs:/gimmepkgs" icinga2-crossbuild
 ```
 
 And the packages are located in your `./pkgs`.
+
+# Variables and build args
+
+- `TARGET_ARCH` (default `arm64`): Specify any architecture, which is supported by debian and matches the target's host architecture
+- `TARGET_TRIPLET` (default `aarch64-linux-gnu`): This is necessary for some weird things with the icinga2 compilation process. If something like `mkclass`, `mkunity` or `mkembed` is not found, you probably specified this wrong. 
+- `ICINGA_VERSION` (currently 2.10.1)

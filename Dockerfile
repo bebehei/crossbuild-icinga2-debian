@@ -1,7 +1,7 @@
 FROM debian:stretch as build
 
-ENV TARGET_ARCH=arm64
-ENV TARGET_TRIPLET=aarch64-linux-gnu
+ARG TARGET_ARCH=arm64
+ARG TARGET_TRIPLET=aarch64-linux-gnu
 
 RUN export DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
@@ -52,7 +52,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
       po-debconf \
  && true
 
-ENV ICINGA_VERSION=2.10.1
+ARG ICINGA_VERSION=2.10.1
 ENV BASEDIR=/icinga2-${ICINGA_VERSION}
 RUN true \
  && apt-get source icinga2 \
